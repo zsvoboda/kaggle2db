@@ -4,7 +4,7 @@
 export PYTHON_VIRTUAL_ENV=dbd-env
 
 # Kaggle authentication
-export KAGGLE_USERNAME="<your-kaggle-name>"
+export KAGGLE_USERNAME="<your-kaggle-username>"
 export KAGGLE_KEY="<your-kaggle-key>"
 
 # Postgres environment
