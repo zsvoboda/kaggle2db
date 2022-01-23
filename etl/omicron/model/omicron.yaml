@@ -1,0 +1,20 @@
+---
+table:
+  columns:
+    date:
+      type: DATE
+      primary-key: true
+    location:
+      primary-key: true
+    variant:
+      index: true
+    num_sequences:
+      type: DECIMAL(13,0)
+    perc_sequences:
+      type: DECIMAL(15,2)
+    num_sequences_total:
+      type: DECIMAL(13,0)
+process:
+  materialization: table
+  mode: drop
+
