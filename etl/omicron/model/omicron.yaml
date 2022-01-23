@@ -3,10 +3,14 @@ table:
   columns:
     date:
       type: DATE
-      primary-key: true
+      primary_key: true
     location:
-      primary-key: true
+      type: VARCHAR(50)
+      primary_key: true
+      index: true
     variant:
+      type: VARCHAR(50)
+      primary_key: true
       index: true
     num_sequences:
       type: DECIMAL(13,0)
