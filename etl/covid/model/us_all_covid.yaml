@@ -1,0 +1,22 @@
+---
+table:
+  columns:
+    date:
+      type: DATE
+      primary_key: true
+    geoid:
+      type: VARCHAR(10)
+    cases:
+      type: DECIMAL(13,0)
+    cases_avg:
+      type: DECIMAL(15,2)
+    deaths:
+      type: DECIMAL(13,0)
+    deaths_avg:
+      type: DECIMAL(15,2)
+    deaths_avg_per_100k:
+      type: DECIMAL(15,2)
+process:
+  materialization: table
+  mode: drop
+

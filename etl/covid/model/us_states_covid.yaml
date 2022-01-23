@@ -1,0 +1,20 @@
+---
+table:
+  columns:
+    date:
+      type: DATE
+      primary_key: true
+    state:
+      type: VARCHAR(50)
+      index: true
+    fips:
+      type: CHAR(2)
+      primary_key: true
+    cases:
+      type: DECIMAL(13,0)
+    deaths:
+      type: DECIMAL(13,0)
+process:
+  materialization: table
+  mode: drop
+

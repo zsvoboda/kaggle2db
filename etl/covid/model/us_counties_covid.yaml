@@ -1,0 +1,24 @@
+---
+table:
+  columns:
+    date:
+      type: DATE
+      primary_key: true
+    county:
+      type: VARCHAR(50)
+      index: true
+      primary_key: true
+    state:
+      type: VARCHAR(50)
+      index: true
+      primary_key: true
+    fips:
+      type: CHAR(5)
+    cases:
+      type: DECIMAL(13,0)
+    deaths:
+      type: DECIMAL(13,0)
+process:
+  materialization: table
+  mode: drop
+
