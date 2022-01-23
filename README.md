@@ -221,3 +221,8 @@ bin\setenv.bat
 cd etl\omicron
 dbd --project mysql.project run .
 ```
+# Documentation
+Refer to the mode detailed [dbd documentation here](https://github.com/zsvoboda/dbd)
+
+# License
+Both this example and the [dbd](https://github.com/zsvoboda/dbd) are licensed under [BSD](LICENSE) license.
