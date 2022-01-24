@@ -3,17 +3,17 @@ This repository contains an example of using [dbd](https://github.com/zsvoboda/d
 
 The [dbd](https://github.com/zsvoboda/dbd) tool supports Kaggle datasets since its version 0.8.3. 
 
-This example supports loading of Kaggle files to SQLite, Postgres, and MySQL databases. The [dbd](https://github.com/zsvoboda/dbd) tool supports more database engines. Modyfying the example to support Snowflake, Redshift, or BigQuery should be trivial. Let me know (by submitting an Issue) if you need a help. 
+This example supports loading of Kaggle files to SQLite, Postgres, and MySQL databases. The [dbd](https://github.com/zsvoboda/dbd) tool supports more database engines. Modifying the example to support Snowflake, Redshift, or BigQuery should be trivial. Let me know (by submitting an Issue) if you need help. 
 
 There are two examples available:
 
 * [Kaggle Omicron dataset](https://www.kaggle.com/yamqwe/omicron-covid19-variant-daily-cases) that loads COVID-19 Omicron variant worldwide data. [This example's sources are here](etl/omicron). 
 * [Kaggle NYT COVID-19 dataset](https://www.kaggle.com/imoore/us-covid19-dataset-live-hourlydaily-updates) that loads New York Times COVID-19 US data. [This example's sources are here](etl/omicron)
 
-# Running the examples
-Here are the quick steps that assume that you already have Python 3.8+ and Python virtual environment installed on your computer. If not, please refer to the [Installation](#installation) chapter below. 
+# Running examples
+Here are quick steps that assume that you already have Python 3.8+ and Python virtual environment installed on your computer. If not, please refer to the [Installation](#installation) chapter below. 
 
-Also, the examples use SQLite. Read the [Using MySQL or Postgres database](#using-mysql-or-postgres-database) chapter below if you have MySQL or Postgres.
+Also, the instructions below are for SQLite. Read the [Using MySQL or Postgres database](#using-mysql-or-postgres-database) chapter below if you have MySQL or Postgres.
 
 1. Modify the `KAGGLE_USERNAME` and `KAGGLE_KEY` environment variables in   the `bin/env.sh` (Linux and MacOS) or `bin\env.bat` scripts. 
 
@@ -120,7 +120,7 @@ cd my-kaggle-dataset
 dbd run .
 ```
 
-The [dbd](https://github.com/zsvoboda/dbd) picks up the `dbd.profile` and `dbd.project` files from the current working directory. You can use `--profile` and `--project` commendline options to use different configuration files.  
+[dbd](https://github.com/zsvoboda/dbd) picks up the `dbd.profile` and `dbd.project` files from the current working directory. You can use `--profile` and `--project` commandline options to use different configuration files.  
 
 7. If you want to modify the default column's data types or add database constraints like primary or foreign keys, checks or indexeas, you can create a YAML file with the same base name to override the defaults.
 
@@ -200,11 +200,13 @@ set MYSQL_HOST=localhost
 set MYSQL_DB=public
 ```
 
-Then you can run the examples by either use a corresponding script in the `bin` directory: `bin/omicron_pgsql.sh` / `bin\omicron_pgsql.bat` or `bin/omicron_mysql.sh` / `bin\omicron_mysql.bat`.
+Then you can run the examples by either use a corresponding script in the `bin` directory. For example, `bin/omicron_pgsql.sh` / `bin\omicron_pgsql.bat` or `bin/covid_mysql.sh` / `bin\covid_mysql.bat`.
 
 OR
 
-using a corresponding `xxxx.project` file directly. For example:
+you can run [dbd](https://github.com/zsvoboda/dbd) with a corresponding profile file (e.g. `pgsql.project` or `mysql.project`) directly. 
+
+For example:
 
 on Linux or MacOS:
 
@@ -222,7 +224,7 @@ cd etl\omicron
 dbd --project mysql.project run .
 ```
 # Documentation
-Refer to the mode detailed [dbd documentation here](https://github.com/zsvoboda/dbd)
+Refer to the complete [dbd documentation here](https://github.com/zsvoboda/dbd)
 
 # License
-Both this example and the [dbd](https://github.com/zsvoboda/dbd) are licensed under [BSD](LICENSE) license.
+These examples are licensed under [BSD license](LICENSE).
